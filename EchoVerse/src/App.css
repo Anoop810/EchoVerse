@@ -1,0 +1,107 @@
+/* App.css - Component-specific styles */
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Styles */
+.header {
+  padding: var(--space-4);
+  background-color: var(--surface-2);
+  box-shadow: var(--shadow-md);
+  animation: slideIn var(--transition-normal);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header-title {
+  color: var(--primary);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* Main Content Area */
+.main-content {
+  flex: 1;
+  padding: var(--space-6);
+  animation: fadeIn var(--transition-slow);
+}
+
+/* Settings Panel */
+.settings-panel {
+  position: fixed;
+  right: var(--space-4);
+  top: var(--space-4);
+  background-color: var(--surface-2);
+  border-radius: 1rem;
+  padding: var(--space-4);
+  box-shadow: var(--shadow-lg);
+  transform-origin: top right;
+  animation: scaleIn var(--transition-normal);
+}
+
+/* Chat Container */
+.chat-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: var(--surface-2);
+  border-radius: 1rem;
+  padding: var(--space-4);
+  box-shadow: var(--shadow-lg);
+}
+
+.message-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.message-item {
+  padding: var(--space-4);
+  border-radius: 0.5rem;
+  background-color: var(--surface-3);
+  animation: slideIn var(--transition-normal);
+}
+
+/* Input Area */
+.input-container {
+  margin-top: var(--space-4);
+  display: flex;
+  gap: var(--space-2);
+}
+
+.input-container textarea {
+  flex: 1;
+}
+
+/* Voice Recorder */
+.voice-recorder {
+  position: fixed;
+  bottom: var(--space-4);
+  right: var(--space-4);
+  animation: fadeIn var(--transition-normal);
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+  
+  .main-content {
+    padding: var(--space-2);
+  }
+  
+  .settings-panel {
+    position: static;
+    margin-top: var(--space-4);
+  }
+}
